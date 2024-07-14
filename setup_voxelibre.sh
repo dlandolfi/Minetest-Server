@@ -6,6 +6,9 @@ cd /var/games/minetest-server/.minetest
 # Create a directory named "games" if it doesn't already exist
 mkdir -p games
 
+# Change the ownership of the "games" directory
+chown Debian-minetest:games games
+
 # Navigate to the "games" directory
 cd games
 
