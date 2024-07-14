@@ -19,15 +19,9 @@ ufw allow OpenSSH
 ufw allow 30000/udp
 ufw enable
 
-# Disable Minetest server service
-systemctl disable minetest-server.service
-
 # Create and enable swap file
 dd if=/dev/zero of=/swapfile bs=1M count=1024
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
 echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
-
-# Reboot the server
-reboot
